@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bravelyn Digital Academy helps learners build practical digital, creative, and AI-enabled skills through guided online training and portfolio-ready projects."
+    />
+    <title>Bravelyn Digital Academy | Learn Practical Skills. Build Real Proof.</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script type="module" src="/src/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="/index.html" class="brand" aria-label="Bravelyn Digital Academy home">
+          <img src="/assets/logo.svg" alt="Bravelyn Digital Academy logo" />
+          <div class="brand-copy">
+            <strong>Bravelyn</strong>
+            <span>Digital Academy</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="/index.html" class="active">Home</a>
+          <a href="/courses.html">All Courses</a>
+          <a href="/about.html">About Us</a>
+          <a href="/ai-assistant.html">AI Assistant</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <select class="currency-switcher" aria-label="Currency selector">
+            <option value="GHS">GHS (₵)</option>
+            <option value="USD">USD ($)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="GBP">GBP (£)</option>
+            <option value="NGN">NGN (₦)</option>
+          </select>
+          <a class="btn btn-secondary" href="/signin.html">Sign In</a>
+          <a class="btn btn-primary" href="/signup.html">Sign Up</a>
+          <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="brand-badge">Career-focused digital training</span>
+            <h1>
+              Learn Practical Skills.
+              <span class="highlight">Build Real Proof.</span>
+            </h1>
+            <p>
+              Bravelyn Digital Academy helps ambitious learners turn digital confidence into career-ready skills through guided practice, portfolio projects, and expert coaching.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="/courses.html">Explore courses</a>
+              <a class="btn btn-secondary light" href="/ai-assistant.html">Meet the AI assistant</a>
+            </div>
+            <div class="hero-highlights">
+              <div class="stat-pill">
+                <strong>9</strong>
+                <span>Career-track programs</span>
+              </div>
+              <div class="stat-pill">
+                <strong>100%</strong>
+                <span>Practical learning</span>
+              </div>
+              <div class="stat-pill">
+                <strong>1:1</strong>
+                <span>Portfolio focus</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card feature-spotlight">
+            <div class="hero-card-inner">
+              <div class="mini-header">
+                <span class="status-dot"></span>
+                <span>Live cohort enrollment</span>
+              </div>
+              <div class="video-box" aria-label="Learning preview"></div>
+              <div class="mini-panel">
+                <div>
+                  <small>Best fit</small>
+                  <strong>AI + Web Careers</strong>
+                </div>
+                <span class="tag">Popular</span>
+              </div>
+              <div class="mini-grid">
+                <div>
+                  <small>Duration</small>
+                  <strong>4–8 weeks</strong>
+                </div>
+                <div>
+                  <small>Price</small>
+                  <strong class="course-price" data-base-price="50">₵50</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Why learners choose us</span>
+            <h2>Built for real careers and real proof.</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="icon">🎯</div>
+              <h3>Career fit</h3>
+              <p>Choose learning paths designed around real digital jobs and modern workflows.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon">🤖</div>
+              <h3>AI-enabled learning</h3>
+              <p>Use practical AI tools and workflows to improve productivity, content, and business operations.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon">🧩</div>
+              <h3>Portfolio projects</h3>
+              <p>Every track ends with a project you can showcase to clients, employers, and collaborators.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon">📈</div>
+              <h3>Flexible access</h3>
+              <p>Learn at your own pace with guided sessions, templates, and practical assignments.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section course-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Featured programs</span>
+            <h2>Explore the academy’s most in-demand paths.</h2>
+          </div>
+          <div class="course-grid" data-featured-grid></div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header center">
+            <span class="eyebrow">Simple pricing</span>
+            <h2>Choose a plan that matches your pace.</h2>
+          </div>
+          <div class="pricing-grid" data-pricing-grid></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split-layout">
+          <div class="feature-panel">
+            <span class="eyebrow">AI-powered learning</span>
+            <h2>Your personal learning copilot, built into every step.</h2>
+            <p>
+              Ask for project ideas, portfolio feedback, weekly study plans, or quick explanations without leaving the platform.
+            </p>
+            <ul class="feature-list">
+              <li>Get study guidance tailored to your goals</li>
+              <li>Receive realistic portfolio feedback</li>
+              <li>Turn course lessons into actionable tasks</li>
+            </ul>
+            <a href="/ai-assistant.html" class="btn btn-primary">Try the assistant</a>
+          </div>
+
+          <div class="assistant-preview">
+            <div class="assistant-window">
+              <div class="chat-bubble user">
+                <span>How do I build a portfolio for a digital marketing role?</span>
+              </div>
+              <div class="chat-bubble assistant">
+                <span>Start with 3 case studies: campaign strategy, content system, and funnel analysis. I can help you structure them.</span>
+              </div>
+              <div class="chat-bubble user short">
+                <span>Make it weekly.</span>
+              </div>
+              <div class="chat-bubble assistant short">
+                <span>Absolutely — here’s your 4-week sprint plan.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Student stories</span>
+            <h2>Real learning, real momentum.</h2>
+          </div>
+          <div class="testimonial-box">
+            <article class="testimonial">
+              <p>“I started with the AI and digital skills track and built my first portfolio project in less than a month.”</p>
+              <strong>— Ama, Virtual Assistant</strong>
+            </article>
+            <article class="testimonial">
+              <p>“The practical focus helped me move from theory to actual systems I could use in client work.”</p>
+              <strong>— Kojo, Social Media Manager</strong>
+            </article>
+            <article class="testimonial">
+              <p>“I gained clarity on where to specialize, and the workbook-style lessons made everything easy to apply.”</p>
+              <strong>— Efua, Content Creator</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="/assets/logo.svg" alt="Bravelyn Digital Academy logo" />
+            <div>
+              <h4>Bravelyn Digital Academy</h4>
+            </div>
+          </div>
+          <p>Practical digital education for people building real careers, client-ready portfolios, and business-ready skills.</p>
+        </div>
+
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/courses.html">All Courses</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/ai-assistant.html">AI Assistant</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:wisdomtorkukwame@gmail.com">wisdomtorkukwame@gmail.com</a></li>
+            <li><a href="tel:+233541235232">+233 54 123 5232</a></li>
+            <li><span>Available Mon–Sat</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© <span data-year></span> Bravelyn Digital Academy</span>
+        <span>Privacy Policy • Terms of Service</span>
+      </div>
+    </footer>
+  </body>
+</html>
