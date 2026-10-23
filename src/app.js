@@ -1,310 +1,213 @@
-const currencyMap = {
-  GHS: { symbol: '₵', rate: 1 },
-  USD: { symbol: '$', rate: 0.083 },
-  EUR: { symbol: '€', rate: 0.074 },
-  GBP: { symbol: '£', rate: 0.062 },
-  NGN: { symbol: '₦', rate: 33.5 }
-};
+<svg width="1280" height="420" viewBox="0 0 1280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brandGradient" x1="120" y1="95" x2="910" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#142B4A"/>
+      <stop offset="0.48" stop-color="#167D9A"/>
+      <stop offset="1" stop-color="#E7A64B"/>
+    </linearGradient>
+    <linearGradient id="brandGlow" x1="215" y1="85" x2="550" y2="250" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#167D9A"/>
+      <stop offset="1" stop-color="#E7A64B"/>
+    </linearGradient>
+  </defs>
 
-const programs = [
-  {
-    title: 'Virtual Administrative Assistant',
-    type: 'Operations',
-    status: 'Available',
-    description: 'Learn inbox management, scheduling, client communication, and running efficient remote admin systems.',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80',
-    basePrice: 50,
-    accent: 'Operations Excellence'
-  },
-  {
-    title: 'AI Automation, Prompt Writing & Website Building',
-    type: 'AI & Web',
-    status: 'Available',
-    description: 'Build practical AI workflows, write better prompts, and launch simple websites without heavy coding.',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80',
-    basePrice: 50,
-    accent: 'Career Growth'
-  },
-  {
-    title: 'Customer Service',
-    type: 'Client Support',
-    status: 'Available',
-    description: 'Master communication, problem-solving, ticket handling, and service standards that support business trust.',
-    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80',
-    basePrice: 50,
-    accent: 'Client Ready'
-  },
-  {
-    title: 'Graphic Design',
-    type: 'Design',
-    status: 'Not Available',
-    description: 'Develop branding, social graphics, layouts, typography, and image composition for digital campaigns.',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80',
-    basePrice: 50,
-    accent: 'Creative Studio'
-  },
-  {
-    title: 'UX/UI Design',
-    type: 'Product Design',
-    status: 'Available',
-    description: 'Design user-centered interfaces, flows, wireframes, and product experiences that convert attention into action.',
-    image: 'https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=900&q=80',
-    basePrice: 50,
-    accent: 'Human-Centered'
-  },
-  {
-    title: 'Social Media Management',
-    type: 'Marketing',
-    status: 'Available',
-    description: 'Plan content calendars, write strategy, measure engagement, and grow audience trust across platforms.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80',
-    basePrice: 50,
-    accent: 'Growth Strategy'
-  },
-  {
-    title: 'SEO & Content Writing',
-    type: 'Content',
-    status: 'Not Available',
-    description: 'Learn keyword strategy, search intent, audience targeting, and writing that builds visibility and trust.',
-    image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80',
-    basePrice: 50,
-    accent: 'Search Impact'
-  },
-  {
-    title: 'Content Creation & Copywriting',
-    type: 'Content',
-    status: 'Available',
-    description: 'Write persuasive copy, craft engaging hooks, and turn marketing messages into clear conversion-focused content.',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80',
-    basePrice: 50,
-    accent: 'Storytelling'
-  },
-  {
-    title: 'Video Editing',
-    type: 'Media',
-    status: 'Available',
-    description: 'Edit short-form video, smooth transitions, manage pacing, audio, captions, and export-ready content.',
-    image: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80',
-    basePrice: 50,
-    accent: 'Short-form Wins'
-  }
-];
+  <g transform="translate(40 10)">
+    <path d="M68 274C68 208.5 106.7 156 156 156H252C328 156 358 205.4 358 259C358 314.7 324.6 364 252 364H142C113.2 364 90 340.8 90 312V298C90 248.2 128.9 206 177 206H264C283 206 298 220.6 298 239C298 257.4 282.8 272 264 272H145" stroke="url(#brandGradient)" stroke-width="34" stroke-linecap="round"/>
+    <path d="M286 164C356 92 483 90 550 154C614 216 612 294 536 312H364" stroke="url(#brandGlow)" stroke-width="34" stroke-linecap="round"/>
+    <path d="M204 278H363C426 278 469 238 469 182C469 126 425 86 363 86H231" stroke="#142B4A" stroke-width="34" stroke-linecap="round"/>
+    <path d="M174 276H332" stroke="#E7A64B" stroke-width="22" stroke-linecap="round"/>
+    <path d="M282 150L320 188L282 226M391 150L353 188L391 226" stroke="#167D9A" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 
-const formatPrice = (value, currency) => {
-  const { symbol, rate } = currencyMap[currency] || currencyMap.GHS;
-  const converted = Number(value) * rate;
-  return `${symbol}${converted.toFixed(converted >= 100 ? 0 : 2)}`;
-};
+  <g transform="translate(460 70)">
+    <text x="0" y="140" fill="#142B4A" font-family="Arial, Helvetica, sans-serif" font-size="168" font-weight="900" letter-spacing="2">BRAVELYN</text>
+    <text x="8" y="230" fill="#142B4A" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="800" letter-spacing="14">DIGITAL ACADEMY</text>
+    <line x1="18" y1="270" x2="678" y2="270" stroke="#167D9A" stroke-width="8" stroke-linecap="round"/>
+    <text x="120" y="340" fill="#167D9A" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" letter-spacing="1.4">Learn Practical Skills. Build Real Proof.</text>
+  </g>
+</svg>
 
-const initializeCurrencySwitcher = () => {
-  const storageCurrency = localStorage.getItem('bravelynCurrency') || 'GHS';
-  const switchers = document.querySelectorAll('.currency-switcher');
 
-  switchers.forEach((select) => {
-    select.value = storageCurrency;
-    select.addEventListener('change', (event) => {
-      const nextCurrency = event.target.value;
-      localStorage.setItem('bravelynCurrency', nextCurrency);
 
-      document.querySelectorAll('.course-price').forEach((node) => {
-        const basePrice = Number(node.dataset.basePrice || 50);
-        node.textContent = formatPrice(basePrice, nextCurrency);
-      });
-    });
-  });
 
-  document.querySelectorAll('.course-price').forEach((node) => {
-    const basePrice = Number(node.dataset.basePrice || 50);
-    node.textContent = formatPrice(basePrice, storageCurrency);
-  });
-};
 
-const renderFeaturedPrograms = () => {
-  const grid = document.querySelector('[data-featured-grid]');
-  if (!grid) return;
 
-  grid.innerHTML = programs.slice(0, 3)
-    .map((program) => `
-      <article class="course-card">
-        <div class="course-image" style="background-image: url('${program.image}')">
-          <span class="course-badge ${program.status === 'Available' ? 'available' : 'upcoming'}">${program.status}</span>
-        </div>
-        <div class="course-body">
-          <div class="course-meta">
-            <span>${program.type}</span>
-            <span>${program.accent}</span>
-          </div>
-          <h3>${program.title}</h3>
-          <p>${program.description}</p>
-          <div class="price-row">
-            <div class="price-tag">
-              <small>From</small>
-              <strong class="course-price" data-base-price="${program.basePrice}">₵50</strong>
-            </div>
-            <a class="link-btn" href="/courses.html">View course</a>
-          </div>
-        </div>
-      </article>
-    `)
-    .join('');
-};
 
-const renderCourseCatalog = () => {
-  const grid = document.querySelector('[data-course-grid]');
-  if (!grid) return;
 
-  const activeFilter = document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
-  const filtered = activeFilter === 'all'
-    ? programs
-    : programs.filter((program) => program.status.toLowerCase() === activeFilter);
 
-  grid.innerHTML = filtered
-    .map((program) => `
-      <article class="course-card">
-        <div class="course-image" style="background-image: url('${program.image}')">
-          <span class="course-badge ${program.status === 'Available' ? 'available' : 'upcoming'}">${program.status}</span>
-        </div>
-        <div class="course-body">
-          <div class="course-meta">
-            <span>${program.type}</span>
-            <span>${program.accent}</span>
-          </div>
-          <h3>${program.title}</h3>
-          <p>${program.description}</p>
-          <div class="price-row">
-            <div class="price-tag">
-              <small>From</small>
-              <strong class="course-price" data-base-price="${program.basePrice}">₵50</strong>
-            </div>
-            <a class="link-btn" href="/contact.html">Enroll now</a>
-          </div>
-        </div>
-      </article>
-    `)
-    .join('');
-};
 
-const initializeCourseFilters = () => {
-  document.querySelectorAll('.filter-btn').forEach((button) => {
-    button.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach((element) => element.classList.remove('active'));
-      button.classList.add('active');
-      renderCourseCatalog();
-      initializeCurrencySwitcher();
-    });
-  });
-};
 
-const initializeForms = () => {
-  const contactForm = document.querySelector('#contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const alertBox = document.querySelector('#contact-alert');
-      alertBox.className = 'alert success';
-      alertBox.textContent = 'Thanks for reaching out. Our admissions team will contact you soon.';
-      contactForm.reset();
-    });
-  }
 
-  const signinForm = document.querySelector('#signin-form');
-  if (signinForm) {
-    signinForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const alertBox = document.querySelector('#signin-alert');
-      alertBox.className = 'alert success';
-      alertBox.textContent = 'Signed in successfully. Redirecting to your dashboard...';
-      setTimeout(() => {
-        alertBox.textContent = 'Demo mode: You are now signed in.';
-      }, 800);
-    });
-  }
 
-  const signupForm = document.querySelector('#signup-form');
-  if (signupForm) {
-    signupForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const alertBox = document.querySelector('#signup-alert');
-      alertBox.className = 'alert success';
-      alertBox.textContent = 'Your account is ready. Welcome to Bravelyn Digital Academy.';
-      signupForm.reset();
-    });
-  }
-};
 
-const initializeAssistant = () => {
-  const form = document.querySelector('#assistant-form');
-  if (!form) return;
 
-  const messages = document.querySelector('#assistant-messages');
-  const input = document.querySelector('#assistant-input');
-  const buttons = document.querySelectorAll('.quick-prompt');
 
-  const responses = {
-    course: 'Our flagship programs include Virtual Administrative Assistant, AI Automation & Website Building, Customer Service, Graphic Design, UX/UI Design, Social Media Management, SEO & Content Writing, Content Creation & Copywriting, and Video Editing.',
-    career: 'If you want a practical route into digital work, start with Virtual Administrative Assistant or AI Automation if you love productivity and tech tools. If you want a creative route, try Graphic Design or Video Editing.',
-    pricing: 'All programs are priced from GHS 50. Use the currency switcher in the header to see equivalent pricing in USD, EUR, GBP, or NGN.',
-    support: 'You can reach the academy via the Contact page or email wisdomtorkukwame@gmail.com for course guidance and admissions support.',
-    default: 'Bravelyn Digital Academy helps learners build practical digital skills through guided projects and portfolio-ready work. Ask me about courses, career fit, pricing, or admissions.'
-  };
 
-  const getResponse = (question) => {
-    const value = question.toLowerCase();
-    if (value.includes('course') || value.includes('program') || value.includes('learn')) return responses.course;
-    if (value.includes('career') || value.includes('job') || value.includes('best')) return responses.career;
-    if (value.includes('price') || value.includes('cost') || value.includes('currency')) return responses.pricing;
-    if (value.includes('contact') || value.includes('support') || value.includes('email')) return responses.support;
-    return responses.default;
-  };
 
-  const addMessage = (content, type = 'bot') => {
-    const item = document.createElement('div');
-    item.className = `message ${type}`;
-    item.textContent = content;
-    messages.appendChild(item);
-    messages.scrollTop = messages.scrollHeight;
-  };
 
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-      input.value = button.dataset.prompt;
-      form.requestSubmit();
-    });
-  });
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const question = input.value.trim();
-    if (!question) return;
-    addMessage(question, 'user');
-    input.value = '';
-    setTimeout(() => addMessage(getResponse(question), 'bot'), 250);
-  });
-};
 
-const initializeNavigation = () => {
-  const toggle = document.querySelector('.mobile-toggle');
-  const nav = document.querySelector('.nav-links');
 
-  if (!toggle || !nav) return;
 
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
-  });
-};
 
-const initializeYear = () => {
-  const yearNode = document.querySelector('[data-year]');
-  if (yearNode) yearNode.textContent = new Date().getFullYear();
-};
 
-document.addEventListener('DOMContentLoaded', () => {
-  renderFeaturedPrograms();
-  renderCourseCatalog();
-  initializeCurrencySwitcher();
-  initializeCourseFilters();
-  initializeForms();
-  initializeAssistant();
-  initializeNavigation();
-  initializeYear();
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
