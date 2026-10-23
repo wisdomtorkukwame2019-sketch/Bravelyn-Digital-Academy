@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses | Bravelyn Digital Academy</title>
+    <meta name="description" content="Browse Bravelyn Digital Academy's practical digital skills course catalog and pricing options." />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="/index.html" class="brand" aria-label="Bravelyn Digital Academy home">
+          <img src="/assets/logo.svg" alt="Bravelyn Digital Academy logo" />
+          <div class="brand-copy">
+            <strong>Bravelyn</strong>
+            <span>Digital Academy</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="/index.html">Home</a>
+          <a href="/courses.html" class="active">All Courses</a>
+          <a href="/about.html">About Us</a>
+          <a href="/ai-assistant.html">AI Assistant</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <select class="currency-switcher" aria-label="Select currency">
+            <option value="GHS">GHS (₵)</option>
+            <option value="USD">USD ($)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="GBP">GBP (£)</option>
+            <option value="NGN">NGN (₦)</option>
+          </select>
+          <a class="btn secondary" href="/signin.html">Sign In</a>
+          <a class="btn" href="/signup.html">Sign Up</a>
+          <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Course catalog</span>
+          <h1>Build real capability across digital careers.</h1>
+          <p>Every program is designed to help learners build skills they can use, show, and improve with practical assignments.</p>
+        </div>
+      </section>
+
+      <section class="section course-section">
+        <div class="container">
+          <div class="filter-row" aria-label="Course filters">
+            <button class="filter-btn active" data-filter="all">All Programs</button>
+            <button class="filter-btn" data-filter="available">Available</button>
+            <button class="filter-btn" data-filter="not available">Not Available</button>
+          </div>
+          <div class="course-grid" data-course-grid></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="/assets/logo.svg" alt="Bravelyn Digital Academy logo" />
+            <div>
+              <h4>Bravelyn Digital Academy</h4>
+            </div>
+          </div>
+          <p>Learn practical skills. Build real proof.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/courses.html">All Courses</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/ai-assistant.html">AI Assistant</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:wisdomtorkukwame@gmail.com">wisdomtorkukwame@gmail.com</a></li>
+            <li><a href="tel:+233541235232">+233 54 123 5232</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year></span> Bravelyn Digital Academy</span>
+        <span>Privacy Policy • Terms of Service</span>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
+

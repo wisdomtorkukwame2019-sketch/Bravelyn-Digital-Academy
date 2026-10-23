@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | Bravelyn Digital Academy</title>
+    <meta name="description" content="Create your Bravelyn Digital Academy account to begin your learning journey." />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="/index.html" class="brand" aria-label="Bravelyn Digital Academy home">
+          <img src="/assets/logo.svg" alt="Bravelyn Digital Academy logo" />
+          <div class="brand-copy">
+            <strong>Bravelyn</strong>
+            <span>Digital Academy</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <main class="auth-shell">
+      <div class="container auth-grid">
+        <div class="auth-panel">
+          <span class="eyebrow">Create your account</span>
+          <h2>Launch your digital career with Bravelyn.</h2>
+          <p>Sign up to access course guides, community updates, and enrollment information for practical digital learning tracks.</p>
+          <div class="social-auth">
+            <button class="social-btn google" type="button">🔵 Sign up with Google</button>
+            <button class="social-btn apple" type="button">⚫ Sign up with Apple</button>
+          </div>
+        </div>
+
+        <div class="auth-panel">
+          <form id="signup-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="signup-first-name">First name</label>
+                <input id="signup-first-name" type="text" required />
+              </div>
+              <div class="form-group">
+                <label for="signup-last-name">Last name</label>
+                <input id="signup-last-name" type="text" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="signup-email">Email address</label>
+              <input id="signup-email" type="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="signup-password">Password</label>
+              <input id="signup-password" type="password" required />
+            </div>
+
+            <label class="checkbox"><input type="checkbox" required /> I agree to the terms and privacy policy</label>
+            <br />
+            <button type="submit" class="btn">Create Account</button>
+            <div id="signup-alert" class="alert" aria-live="polite"></div>
+            <p class="form-note">Already registered? <a href="/signin.html">Sign in</a></p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="/assets/logo.svg" alt="Bravelyn Digital Academy logo" />
+            <div>
+              <h4>Bravelyn Digital Academy</h4>
+            </div>
+          </div>
+          <p>Learn practical skills. Build real proof.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/courses.html">All Courses</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/ai-assistant.html">AI Assistant</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:wisdomtorkukwame@gmail.com">wisdomtorkukwame@gmail.com</a></li>
+            <li><a href="tel:+233541235232">+233 54 123 5232</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year></span> Bravelyn Digital Academy</span>
+        <span>Privacy Policy • Terms of Service</span>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
+

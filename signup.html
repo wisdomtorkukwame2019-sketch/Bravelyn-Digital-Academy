@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In | Bravelyn Digital Academy</title>
+    <meta name="description" content="Sign in to your Bravelyn Digital Academy account." />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="/index.html" class="brand" aria-label="Bravelyn Digital Academy home">
+          <img src="/assets/logo.svg" alt="Bravelyn Digital Academy logo" />
+          <div class="brand-copy">
+            <strong>Bravelyn</strong>
+            <span>Digital Academy</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <main class="auth-shell">
+      <div class="container auth-grid">
+        <div class="auth-panel">
+          <span class="eyebrow">Welcome back</span>
+          <h2>Sign in to your learning dashboard.</h2>
+          <p>Access your courses, continue your training, and track your progress with Bravelyn Digital Academy.</p>
+          <div class="social-auth">
+            <button class="social-btn google" type="button">🔵 Continue with Google</button>
+            <button class="social-btn apple" type="button">⚫ Continue with Apple</button>
+          </div>
+        </div>
+
+        <div class="auth-panel">
+          <form id="signin-form">
+            <div class="form-group">
+              <label for="signin-email">Email address</label>
+              <input id="signin-email" type="email" required />
+            </div>
+            <div class="form-group">
+              <label for="signin-password">Password</label>
+              <input id="signin-password" type="password" required />
+            </div>
+            <div class="inline-row">
+              <label class="checkbox"><input type="checkbox" /> Remember me</label>
+              <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn">Sign In</button>
+            <div id="signin-alert" class="alert" aria-live="polite"></div>
+            <p class="form-note">New here? <a href="/signup.html">Create an account</a></p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="/assets/logo.svg" alt="Bravelyn Digital Academy logo" />
+            <div>
+              <h4>Bravelyn Digital Academy</h4>
+            </div>
+          </div>
+          <p>Learn practical skills. Build real proof.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/courses.html">All Courses</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/ai-assistant.html">AI Assistant</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:wisdomtorkukwame@gmail.com">wisdomtorkukwame@gmail.com</a></li>
+            <li><a href="tel:+233541235232">+233 54 123 5232</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year></span> Bravelyn Digital Academy</span>
+        <span>Privacy Policy • Terms of Service</span>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
+

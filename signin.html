@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Bravelyn Digital Academy</title>
+    <meta name="description" content="Get in touch with Bravelyn Digital Academy for course guidance, admissions, and programme enquiries." />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="/index.html" class="brand" aria-label="Bravelyn Digital Academy home">
+          <img src="/assets/logo.svg" alt="Bravelyn Digital Academy logo" />
+          <div class="brand-copy">
+            <strong>Bravelyn</strong>
+            <span>Digital Academy</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="/index.html">Home</a>
+          <a href="/courses.html">All Courses</a>
+          <a href="/about.html">About Us</a>
+          <a href="/ai-assistant.html">AI Assistant</a>
+          <a href="/contact.html" class="active">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <select class="currency-switcher" aria-label="Select currency">
+            <option value="GHS">GHS (₵)</option>
+            <option value="USD">USD ($)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="GBP">GBP (£)</option>
+            <option value="NGN">NGN (₦)</option>
+          </select>
+          <a class="btn secondary" href="/signin.html">Sign In</a>
+          <a class="btn" href="/signup.html">Sign Up</a>
+          <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Talk to us</span>
+          <h1>Start your learning journey.</h1>
+          <p>Whether you need guidance on choosing a course or want to ask about enrolment, we’re here to help.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container contact-grid">
+          <div>
+            <div class="contact-card">
+              <h3>Contact details</h3>
+              <p><strong>Email:</strong> <a href="mailto:wisdomtorkukwame@gmail.com">wisdomtorkukwame@gmail.com</a></p>
+              <p><strong>Phone:</strong> <a href="tel:+233541235232">+233 54 123 5232</a></p>
+              <p><strong>Hours:</strong> Monday to Saturday, 9:00 AM–6:00 PM</p>
+            </div>
+          </div>
+
+          <div class="auth-panel">
+            <h2>Send a message</h2>
+            <form id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First name</label>
+                  <input id="first-name" name="first-name" type="text" required />
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last name</label>
+                  <input id="last-name" name="last-name" type="text" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="course">Interested in</label>
+                <select id="course" name="course">
+                  <option>Virtual Administrative Assistant</option>
+                  <option>AI Automation, Prompt Writing & Website Building</option>
+                  <option>Customer Service</option>
+                  <option>Graphic Design</option>
+                  <option>UX/UI Design</option>
+                  <option>Social Media Management</option>
+                  <option>SEO & Content Writing</option>
+                  <option>Content Creation & Copywriting</option>
+                  <option>Video Editing</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+
+              <button type="submit" class="btn">Send message</button>
+              <div id="contact-alert" class="alert" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="/assets/logo.svg" alt="Bravelyn Digital Academy logo" />
+            <div>
+              <h4>Bravelyn Digital Academy</h4>
+            </div>
+          </div>
+          <p>Learn practical skills. Build real proof.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/courses.html">All Courses</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/ai-assistant.html">AI Assistant</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:wisdomtorkukwame@gmail.com">wisdomtorkukwame@gmail.com</a></li>
+            <li><a href="tel:+233541235232">+233 54 123 5232</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year></span> Bravelyn Digital Academy</span>
+        <span>Privacy Policy • Terms of Service</span>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
+
